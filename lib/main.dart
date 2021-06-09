@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
         // brightness: Brightness.dark,
         primarySwatch: Colors.deepPurple,
       ),
-      // initialRoute: "/home",
+      debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),

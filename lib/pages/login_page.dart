@@ -8,19 +8,19 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String name = "";
-  bool ChangeButton = false;
+  bool changeButton = false;
 
   final _formKey = GlobalKey<FormState>();
 
   moveToHome(BuildContext context) async {
     if (_formKey.currentState!.validate()) {
       setState(() {
-        ChangeButton = true;
+        changeButton = true;
       });
       await Future.delayed(Duration(seconds: 1));
       await Navigator.pushNamed(context, MyRoutes.homeRoute);
       setState(() {
-        ChangeButton = false;
+        changeButton = false;
       });
     }
   }
@@ -90,15 +90,15 @@ class _LoginPageState extends State<LoginPage> {
                     Material(
                       color: Colors.deepPurple,
                       borderRadius:
-                          BorderRadius.circular(ChangeButton ? 50 : 8),
+                          BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
                         onTap: () => moveToHome(context),
                         child: AnimatedContainer(
                           duration: Duration(seconds: 1),
-                          width: ChangeButton ? 50 : 150,
+                          width: changeButton ? 50 : 150,
                           height: 50,
                           alignment: Alignment.center,
-                          child: ChangeButton
+                          child: changeButton
                               ? Icon(
                                   Icons.done,
                                   color: Colors.white,
