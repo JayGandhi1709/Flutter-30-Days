@@ -56,7 +56,11 @@ class CatalogItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
-                catalog.desc.text.make(),
+                // catalog.desc.text.make(),
+                Text(
+                  catalog.desc,
+                  style: Theme.of(context).textTheme.caption,
+                ),
                 10.heightBox,
                 ButtonBar(
                   alignment: MainAxisAlignment.spaceBetween,
@@ -73,7 +77,7 @@ class CatalogItem extends StatelessWidget {
                           StadiumBorder(),
                         ),
                       ),
-                      child: "Buy".text.make(),
+                      child: "Add to cart".text.make(),
                     )
                   ],
                 ).pOnly(right: 8.0),
