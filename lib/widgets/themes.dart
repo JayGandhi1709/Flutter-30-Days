@@ -17,6 +17,6 @@ class MyTheme {
       );
 
   // Color
-  static Color CreamColor = Color(0xfff5f5f5);
-  static Color DarkBluishColor = Color(0xff403b58);
+  static Color creamColor = Color(0xfff5f5f5);
+  static Color darkBluishColor = Color(0xff403b58);
 }
